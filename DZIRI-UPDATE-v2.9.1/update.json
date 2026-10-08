@@ -1,0 +1,19 @@
+{
+  "name": "Dziri System AutoRole Synchronization Hotfix",
+  "version": "2.9.1",
+  "type": "in-place-hotfix",
+  "dependenciesChanged": false,
+  "requiresNpmInstall": false,
+  "configMigration": "not-required",
+  "preservesExistingConfiguration": true,
+  "replace": [
+    "public/assets/app.js",
+    "public/index.html",
+    "services/autoRoleService.js"
+  ],
+  "fixes": [
+    "autoRoleService.status is not a function",
+    "undefinedAutoRole navigation label",
+    "stale cached dashboard app.js"
+  ]
+}

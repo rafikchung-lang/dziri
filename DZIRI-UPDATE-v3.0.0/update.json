@@ -1,0 +1,30 @@
+{
+  "name": "Dziri System Voice Chat Cleanup + Member Messaging Update",
+  "version": "3.0.0",
+  "type": "in-place-patch",
+  "description": "Adds persisted public/temporary voice-chat cleanup scheduling and extends queued member messaging with attachments, placeholders, previews, bot selection and webhook delivery.",
+  "dependenciesChanged": false,
+  "requiresNpmInstall": false,
+  "restartRequired": true,
+  "configMigration": "automatic-backward-compatible-default-merge",
+  "preservesExistingConfiguration": true,
+  "modified": [
+    "config/defaults.js",
+    "dashboard/api.js",
+    "dashboard/server.js",
+    "public/assets/app.js",
+    "public/index.html",
+    "services/broadcastService.js",
+    "services/tempRoomService.js"
+  ],
+  "added": [],
+  "newConfigDefaults": {
+    "automod.messageCleanup.temporaryRooms.enabled": true,
+    "automod.messageCleanup.temporaryRooms.intervalValue": 24,
+    "automod.messageCleanup.temporaryRooms.intervalUnit": "hours",
+    "automod.messageCleanup.publicVoice.enabled": false,
+    "automod.messageCleanup.publicVoice.channelIds": [],
+    "automod.messageCleanup.publicVoice.intervalValue": 24,
+    "automod.messageCleanup.publicVoice.intervalUnit": "hours"
+  }
+}

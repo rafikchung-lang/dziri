@@ -1,0 +1,39 @@
+{
+  "name": "Dziri System Update",
+  "version": "2.9.0",
+  "type": "in-place-patch",
+  "dependenciesChanged": false,
+  "requiresNpmInstall": false,
+  "configMigration": "automatic-backward-compatible-default-merge",
+  "preservesDataDirectory": true,
+  "modified": [
+    "commands/moderation/purge.js",
+    "commands/utility/help.js",
+    "commands/utility/history.js",
+    "config/defaults.js",
+    "dashboard/api.js",
+    "events/ready.js",
+    "public/assets/app.js",
+    "services/loggingService.js",
+    "services/tempRoomService.js",
+    "services/ticketService.js",
+    "utils/logger.js"
+  ],
+  "added": [
+    "commands/moderation/move.js",
+    "commands/utility/moveme.js",
+    "commands/utility/crimeshistory.js",
+    "commands/utility/currentcrime.js",
+    "services/crimeService.js",
+    "utils/discordOutput.js"
+  ],
+  "features": [
+    "unlimited-purge-batching",
+    "move-and-moveme-commands",
+    "crime-history-and-current-crime",
+    "temporary-room-chat-retention",
+    "log-retention-and-manual-clear",
+    "discord-limit-aware-command-output",
+    "ticket-notification-direct-accept"
+  ]
+}
